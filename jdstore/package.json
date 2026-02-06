@@ -2,6 +2,7 @@
   "name": "jdstore",
   "private": true,
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/assets/mbw_mjob/jdstore/ && yarn copy-html-entry",
@@ -9,13 +10,23 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@popperjs/core": "^2.11.8",
     "@tanstack/vue-query": "^5.28.0",
+    "frappe-ui": "0.1.261",
+    "@tiptap/core": "^3.19.0",
     "@tiptap/extension-paragraph": "^2.12.0",
+    "@tiptap/pm": "^3.19.0",
+    "@tiptap/vue-3": "^3.19.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vueuse/integrations": "^10.3.0",
-    "frappe-ui": "https://github.com/frappe/frappe-ui.git#e239181ef6a22efcfa7dc3466ff9c8899daa5bba",
+    "dayjs": "^1.11.19",
+    "dompurify": "^3.3.1",
+    "echarts": "^6.0.0",
+    "feather-icons": "^4.29.2",
     "gemoji": "^8.1.0",
+    "grid-layout-plus": "^1.1.1",
     "lodash": "^4.17.21",
     "mime": "^4.0.1",
     "pinia": "^2.0.33",
@@ -28,9 +39,12 @@
     "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.4.15",
+    "typescript": "^5.9.3",
     "unplugin-icons": "^23.0.1"
   }
 }

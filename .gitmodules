@@ -1,3 +1,18 @@
 [submodule "jdstore/frappe-ui"]
 	path = jdstore/frappe-ui
 	url = https://github.com/frappe/frappe-ui.git
+[submodule "jdeditor/frappe-ui"]
+	path = jdeditor/frappe-ui
+	url = https://github.com/frappe/frappe-ui.git
+[submodule "jdcrawler/frappe-ui"]
+	path = jdcrawler/frappe-ui
+	url = https://github.com/frappe/frappe-ui.git
+[submodule "jdstudio/frappe-ui"]
+	path = jdstudio/frappe-ui
+	url = https://github.com/frappe/frappe-ui.git
+[submodule "mjob/frappe-ui"]
+	path = mjob/frappe-ui
+	url = https://github.com/frappe/frappe-ui.git
+[submodule "mseeker/frappe-ui"]
+	path = mseeker/frappe-ui
+	url = https://github.com/frappe/frappe-ui.git
