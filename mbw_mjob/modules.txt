@@ -1,1 +1,6 @@
 MJOB
+JDStore
+JDEditor
+JDStudio
+JDCrawler
+MSeeker

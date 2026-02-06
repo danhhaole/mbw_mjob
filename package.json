@@ -1,0 +1,35 @@
+{
+  "name": "mbw_mjob",
+  "private": true,
+  "workspaces": [
+    "jdstore",
+    "jdeditor",
+    "jdstudio",
+    "jdcrawler",
+    "mjob",
+    "mseeker"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces run dev",
+    "build": "yarn workspaces run build",
+    "preview": "yarn workspaces run preview",
+    "build:jdcrawler": "yarn workspace jdcrawler build",
+    "dev:jdcrawler": "yarn workspace jdcrawler dev",
+    "preview:jdcrawler": "yarn workspace jdcrawler preview",
+    "build:jdeditor": "yarn workspace jdeditor build",
+    "dev:jdeditor": "yarn workspace jdeditor dev",
+    "preview:jdeditor": "yarn workspace jdeditor preview",
+    "build:jdstore": "yarn workspace jdstore build",
+    "dev:jdstore": "yarn workspace jdstore dev",
+    "preview:jdstore": "yarn workspace jdstore preview",
+    "build:jdstudio": "yarn workspace jdstudio build",
+    "dev:jdstudio": "yarn workspace jdstudio dev",
+    "preview:jdstudio": "yarn workspace jdstudio preview",
+    "build:mjob": "yarn workspace mjob build",
+    "dev:mjob": "yarn workspace mjob dev",
+    "preview:mjob": "yarn workspace mjob preview",
+    "build:mseeker": "yarn workspace mseeker build",
+    "dev:mseeker": "yarn workspace mseeker dev",
+    "preview:mseeker": "yarn workspace mseeker preview"
+  }
+}
