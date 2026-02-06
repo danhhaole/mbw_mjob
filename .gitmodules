@@ -1,0 +1,3 @@
+[submodule "jdstore/frappe-ui"]
+	path = jdstore/frappe-ui
+	url = https://github.com/frappe/frappe-ui.git
