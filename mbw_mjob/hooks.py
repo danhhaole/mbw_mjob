@@ -5,6 +5,16 @@ app_description = "MBW MJOB"
 app_email = "admin@mbw.vn"
 app_license = "unlicense"
 
+# Website route rules
+website_route_rules = [
+	{"from_route": "/mjob/<path:app_path>", "to_route": "mjob"},
+	{"from_route": "/jdstore/<path:app_path>", "to_route": "jdstore"},
+	{"from_route": "/jdstudio/<path:app_path>", "to_route": "jdstudio"},
+	{"from_route": "/jdeditor/<path:app_path>", "to_route": "jdeditor"},
+	{"from_route": "/jdcrawler/<path:app_path>", "to_route": "jdcrawler"},
+	{"from_route": "/mseeker/<path:app_path>", "to_route": "mseeker"},
+]
+
 # Apps
 # ------------------
 

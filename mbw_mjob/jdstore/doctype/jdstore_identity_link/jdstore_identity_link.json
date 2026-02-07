@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-07 11:23:15.890086",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "entity_type",
+  "source_entity_id",
+  "target_entity_id",
+  "match_method",
+  "decision_state",
+  "context"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_entity_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source Entity ID",
+   "options": "JDStore Job Data Record",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_entity_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Entity ID",
+   "options": "JDStore Job Posting",
+   "reqd": 1
+  },
+  {
+   "description": "ENUM DOMAIN: job",
+   "fieldname": "entity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Entity Type",
+   "options": "JOB",
+   "reqd": 1
+  },
+  {
+   "description": "ENUM DOMAIN: exact | fuzzy | ai",
+   "fieldname": "match_method",
+   "fieldtype": "Select",
+   "label": "Match Method",
+   "options": "EXACT\nFUZZY\nAI"
+  },
+  {
+   "description": "ENUM DOMAIN: pending | accepted | rejected",
+   "fieldname": "decision_state",
+   "fieldtype": "Select",
+   "label": "Decision State",
+   "options": "PENDING\nACCEPTED\nREJECTED"
+  },
+  {
+   "description": "Schema: identity_link_context_v1",
+   "fieldname": "context",
+   "fieldtype": "JSON",
+   "label": "Context"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-07 14:43:31.799652",
+ "modified_by": "Administrator",
+ "module": "JDStore",
+ "name": "JDStore Identity Link",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

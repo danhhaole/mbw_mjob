@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-07 11:25:56.846053",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_8nun"
+ ],
+ "fields": [
+      {"fieldname":"monitoring_policy","label":"Monitoring Policy","fieldtype":"Link","options":"JDStore Monitoring Policy","reqd":1},
+      {"fieldname":"governance_case","label":"Governance Case","fieldtype":"Link","options":"JDStore Governance Case"},
+      {"fieldname":"result_data","label":"Result Data","fieldtype":"JSON","reqd":1},
+      {"fieldname":"evaluated_at","label":"Evaluated At","fieldtype":"Datetime","reqd":1}
+    ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-07 11:25:56.846053",
+ "modified_by": "Administrator",
+ "module": "JDStore",
+ "name": "JDStore Monitoring Result",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

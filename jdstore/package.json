@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/assets/mbw_mjob/jdstore/ && yarn copy-html-entry",
-    "copy-html-entry": "cp ../mbw_mjob/public/jdstore/index.html ../mbw_mjob/www/jdstore.html",
+    "copy-html-entry": "cp ../mbw_mjob/public/frontend/index.html ../mbw_mjob/www/jdstore.html",
     "serve": "vite preview"
   },
   "dependencies": {

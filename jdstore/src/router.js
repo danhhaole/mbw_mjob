@@ -1,13 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import productRoutes from '@/features/products/routes'
-import companyRoutes from '@/features/company/routes'
+import { companyRoutes } from '@/features/company'
 
 const routes = [
   {
     path: '/',
-    redirect: '/products',
+    redirect: '/companies',
   },
-  ...productRoutes,
   ...companyRoutes,
 ]
 
