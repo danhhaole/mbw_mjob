@@ -1,51 +1,52 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-02-07 11:25:10.734687",
+ "creation": "2026-02-07 11:20:26.862775",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_okac"
+  "section_break_iemq"
  ],
  "fields": [
       {
-        "fieldname": "governance_case_id",
-        "label": "Governance Case",
+        "fieldname": "batch_id",
+        "label": "Batch",
         "fieldtype": "Link",
-        "options": "JDStore Governance Case",
+        "options": "JDStore Ingestion Batch",
         "reqd": 1
       },
       {
-        "fieldname": "agent_name",
-        "label": "Agent Name",
-        "fieldtype": "Data",
-        "reqd": 1
+        "fieldname": "external_ref_id",
+        "label": "External Ref ID",
+        "fieldtype": "Data"
       },
       {
-        "fieldname": "result_summary",
-        "label": "Result Summary",
+        "fieldname": "raw_payload",
+        "label": "Raw Payload",
         "fieldtype": "Code",
-        "options": "JSON"
-      },
-      {
-        "fieldname": "duration_ms",
-        "label": "Duration (ms)",
-        "fieldtype": "Int"
-      },
-      {
-        "fieldname": "executed_at",
-        "label": "Executed At",
-        "fieldtype": "Datetime",
+        "options": "JSON",
         "reqd": 1
+      },
+      {
+        "fieldname": "processing_status",
+        "label": "Processing Status",
+        "fieldtype": "Select",
+        "options": "SUCCESS\nERROR\nIGNORED",
+        "reqd": 1
+      },
+      {
+        "fieldname": "error_log",
+        "label": "Error Log",
+        "fieldtype": "Text"
       }
     ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-07 11:25:10.734687",
+ "modified": "2026-02-07 11:20:26.862775",
  "modified_by": "Administrator",
  "module": "JDStore",
- "name": "JDStore Analysis Run",
+ "name": "JDStore Raw Job Record",
  "owner": "Administrator",
  "permissions": [
   {

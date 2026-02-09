@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-09 10:58:14.039895",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_v9zx"
+ ],
+ "fields": [
+  { "fieldname": "task_type", "fieldtype": "Select", "label": "Loại tác vụ", "options": "IMPORT_JOB\nEXPORT_JOB\nEXPORT_REPORT", "reqd": 1 },
+  { "fieldname": "status", "fieldtype": "Select", "label": "Trạng thái", "options": "QUEUED\nPROCESSING\nCOMPLETED\nFAILED\nCANCELLED", "default": "QUEUED", "in_list_view": 1 },
+  { "fieldname": "progress", "fieldtype": "Percent", "label": "Tiến độ", "in_list_view": 1 },
+  { "fieldname": "file_url", "fieldtype": "Attach", "label": "File đính kèm" },
+  { "fieldname": "payload", "fieldtype": "Code", "label": "Tham số", "options": "JSON" },
+  { "fieldname": "error_log", "fieldtype": "Small Text", "label": "Nhật ký lỗi" },
+  { "fieldname": "started_at", "fieldtype": "Datetime", "label": "Bắt đầu lúc", "read_only": 1 },
+  { "fieldname": "completed_at", "fieldtype": "Datetime", "label": "Hoàn thành lúc", "read_only": 1 }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-09 10:58:14.039895",
+ "modified_by": "Administrator",
+ "module": "JDStore",
+ "name": "JDStore Task Queue",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

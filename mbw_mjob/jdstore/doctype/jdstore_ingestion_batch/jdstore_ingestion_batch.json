@@ -1,53 +1,50 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-02-07 11:23:56.907065",
+ "creation": "2026-02-09 08:46:08.085443",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_bwdj"
+  "section_break_jnut"
  ],
  "fields": [
       {
-        "fieldname": "job_posting_id",
-        "label": "Job Posting",
+        "fieldname": "provider_id",
+        "label": "Provider",
         "fieldtype": "Link",
-        "options": "JDStore Job Posting",
+        "options": "JDStore Data Provider",
         "reqd": 1
       },
       {
-        "fieldname": "trigger_event",
-        "label": "Trigger Event",
+        "fieldname": "source_type",
+        "label": "Source Type",
         "fieldtype": "Select",
-        "options": "ON_CREATE\nON_UPDATE\nUSER_REPORT",
+        "options": "API_PUSH\nFILE_UPLOAD\nMANUAL_ENTRY",
         "reqd": 1
       },
       {
-        "fieldname": "case_status",
-        "label": "Case Status",
+        "fieldname": "batch_status",
+        "label": "Batch Status",
         "fieldtype": "Select",
-        "options": "OPEN\nAUTO_RESOLVED\nHUMAN_RESOLVED",
-        "reqd": 1
+        "options": "QUEUED\nPROCESSING\nCOMPLETED\nFAILED",
+        "reqd": 1,
+        "default": "QUEUED"
       },
       {
-        "fieldname": "risk_score",
-        "label": "Risk Score",
-        "fieldtype": "Int"
-      },
-      {
-        "fieldname": "risk_level",
-        "label": "Risk Level",
-        "fieldtype": "Select",
-        "options": "HIGH\nMEDIUM\nLOW\nCLEAN"
+        "fieldname": "received_at",
+        "label": "Received At",
+        "fieldtype": "Datetime",
+        "reqd": 1,
+        "default": "Now"
       }
     ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-07 11:23:56.907065",
+ "modified": "2026-02-09 08:46:08.085443",
  "modified_by": "Administrator",
  "module": "JDStore",
- "name": "JDStore Governance Case",
+ "name": "JDStore Ingestion Batch",
  "owner": "Administrator",
  "permissions": [
   {

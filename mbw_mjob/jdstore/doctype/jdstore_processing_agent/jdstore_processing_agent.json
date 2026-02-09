@@ -8,25 +8,40 @@
   "section_break_n2hw"
  ],
  "fields": [
-    {
-      "fieldname": "agent_type",
-      "label": "Agent Type",
-      "fieldtype": "Data",
-      "reqd": 1,
-      "description": "ENUM DOMAIN: ai | rule | human"
-    },
-    {
-      "fieldname": "name",
-      "label": "Name",
-      "fieldtype": "Data"
-    },
-    {
-      "fieldname": "config",
-      "label": "Config",
-      "fieldtype": "JSON",
-      "description": "Schema: processing_agent_config_v1"
-    }
-  ],
+      {
+        "fieldname": "agent_name",
+        "label": "Agent Name",
+        "fieldtype": "Data",
+        "reqd": 1
+      },
+      {
+        "fieldname": "agent_type",
+        "label": "Agent Type",
+        "fieldtype": "Select",
+        "options": "REGEX_MATCHER\nKEYWORD_FILTER\nLLM_MODEL\nML_CLASSIFIER",
+        "reqd": 1
+      },
+      {
+        "fieldname": "api_endpoint",
+        "label": "API Endpoint",
+        "fieldtype": "Data",
+        "description": "URL để gọi service này nếu là external bot"
+      },
+      {
+        "fieldname": "agent_config",
+        "label": "Agent Config",
+        "fieldtype": "Code",
+        "options": "JSON",
+        "description": "Cấu hình riêng cho Agent (Threshold, Timeout...)"
+      },
+      {
+        "fieldname": "is_active",
+        "label": "Is Active",
+        "fieldtype": "Check",
+        "default": 1
+      }
+    ],
+    "description": "Quản lý các Bot hoặc Service thực hiện việc quét và phân tích dữ liệu.",
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],

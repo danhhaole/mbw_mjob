@@ -1,22 +1,52 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-02-07 11:25:56.846053",
+ "creation": "2026-02-09 09:02:14.987933",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_8nun"
+  "section_break_uclh"
  ],
- "fields": [
-      {"fieldname":"monitoring_policy","label":"Monitoring Policy","fieldtype":"Link","options":"JDStore Monitoring Policy","reqd":1},
-      {"fieldname":"governance_case","label":"Governance Case","fieldtype":"Link","options":"JDStore Governance Case"},
-      {"fieldname":"result_data","label":"Result Data","fieldtype":"JSON","reqd":1},
-      {"fieldname":"evaluated_at","label":"Evaluated At","fieldtype":"Datetime","reqd":1}
+ "description": "Kết quả của các đợt quét giám sát.",
+    "fields": [
+      {
+        "fieldname": "monitoring_policy_id",
+        "label": "Monitoring Policy",
+        "fieldtype": "Link",
+        "options": "JDStore Monitoring Policy",
+        "reqd": 1
+      },
+      {
+        "fieldname": "job_posting_id",
+        "label": "Job Posting",
+        "fieldtype": "Link",
+        "options": "JDStore Job Posting",
+        "reqd": 1
+      },
+      {
+        "fieldname": "is_violation",
+        "label": "Is Violation",
+        "fieldtype": "Check",
+        "default": 0
+      },
+      {
+        "fieldname": "result_detail",
+        "label": "Result Detail",
+        "fieldtype": "Code",
+        "options": "JSON"
+      },
+      {
+        "fieldname": "evaluated_at",
+        "label": "Evaluated At",
+        "fieldtype": "Datetime",
+        "reqd": 1,
+        "default": "Now"
+      }
     ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-07 11:25:56.846053",
+ "modified": "2026-02-09 09:02:14.987933",
  "modified_by": "Administrator",
  "module": "JDStore",
  "name": "JDStore Monitoring Result",

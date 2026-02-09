@@ -1,11 +1,11 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-02-07 11:25:10.734687",
+ "creation": "2026-02-09 08:53:08.347987",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_okac"
+  "section_break_lfjx"
  ],
  "fields": [
       {
@@ -16,36 +16,37 @@
         "reqd": 1
       },
       {
-        "fieldname": "agent_name",
-        "label": "Agent Name",
-        "fieldtype": "Data",
+        "fieldname": "assigned_to",
+        "label": "Assigned To",
+        "fieldtype": "Link",
+        "options": "JDStore Internal User"
+      },
+      {
+        "fieldname": "task_status",
+        "label": "Task Status",
+        "fieldtype": "Select",
+        "options": "PENDING\nIN_PROGRESS\nCOMPLETED",
         "reqd": 1
       },
       {
-        "fieldname": "result_summary",
-        "label": "Result Summary",
-        "fieldtype": "Code",
-        "options": "JSON"
+        "fieldname": "priority",
+        "label": "Priority",
+        "fieldtype": "Select",
+        "options": "URGENT\nNORMAL"
       },
       {
-        "fieldname": "duration_ms",
-        "label": "Duration (ms)",
-        "fieldtype": "Int"
-      },
-      {
-        "fieldname": "executed_at",
-        "label": "Executed At",
-        "fieldtype": "Datetime",
-        "reqd": 1
+        "fieldname": "due_at",
+        "label": "Due Date",
+        "fieldtype": "Datetime"
       }
     ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-07 11:25:10.734687",
+ "modified": "2026-02-09 08:53:08.347987",
  "modified_by": "Administrator",
  "module": "JDStore",
- "name": "JDStore Analysis Run",
+ "name": "JDStore Human Review Task",
  "owner": "Administrator",
  "permissions": [
   {

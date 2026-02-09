@@ -7,11 +7,41 @@
  "field_order": [
   "section_break_fo0l"
  ],
- "fields": [
-    {"fieldname":"agent_name","label":"Agent Name","fieldtype":"Data"},
-    {"fieldname":"agent_type","label":"Agent Type","fieldtype":"Data"},
-    {"fieldname":"agent_metadata","label":"Agent Metadata","fieldtype":"JSON"}
-  ],
+ "description": "Định nghĩa một nhiệm vụ phân tích cụ thể (kết hợp giữa Luật và Agent).",
+    "fields": [
+      {
+        "fieldname": "task_name",
+        "label": "Task Name",
+        "fieldtype": "Data",
+        "reqd": 1
+      },
+      {
+        "fieldname": "related_policy",
+        "label": "Related Policy",
+        "fieldtype": "Link",
+        "options": "JDStore Ref Policy",
+        "reqd": 1
+      },
+      {
+        "fieldname": "assigned_agent",
+        "label": "Assigned Agent",
+        "fieldtype": "Link",
+        "options": "JDStore Processing Agent",
+        "reqd": 1
+      },
+      {
+        "fieldname": "priority",
+        "label": "Priority",
+        "fieldtype": "Int",
+        "default": 1
+      },
+      {
+        "fieldname": "task_config",
+        "label": "Task Override Config",
+        "fieldtype": "Code",
+        "options": "JSON"
+      }
+    ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],

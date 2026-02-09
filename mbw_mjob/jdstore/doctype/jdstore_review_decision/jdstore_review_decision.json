@@ -7,11 +7,42 @@
  "field_order": [
   "section_break_mrsv"
  ],
- "fields": [
-      {"fieldname":"review_case","label":"Review Case","fieldtype":"Link","options":"JDStore Human Review Case","reqd":1},
-      {"fieldname":"decision","label":"Decision","fieldtype":"Data","reqd":1},
-      {"fieldname":"comment","label":"Comment","fieldtype":"Text"},
-      {"fieldname":"decided_at","label":"Decided At","fieldtype":"Datetime","reqd":1}
+"fields": [
+      {
+        "fieldname": "task_id",
+        "label": "Task",
+        "fieldtype": "Link",
+        "options": "JDStore Human Review Task",
+        "reqd": 1
+      },
+      {
+        "fieldname": "outcome",
+        "label": "Outcome",
+        "fieldtype": "Select",
+        "options": "APPROVE\nREJECT\nREQUEST_CHANGE",
+        "reqd": 1
+      },
+      {
+        "fieldname": "reason_code",
+        "label": "Reason Code",
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "public_message",
+        "label": "Public Message",
+        "fieldtype": "Text"
+      },
+      {
+        "fieldname": "internal_note",
+        "label": "Internal Note",
+        "fieldtype": "Text"
+      },
+      {
+        "fieldname": "decided_at",
+        "label": "Decided At",
+        "fieldtype": "Datetime",
+        "reqd": 1
+      }
     ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,

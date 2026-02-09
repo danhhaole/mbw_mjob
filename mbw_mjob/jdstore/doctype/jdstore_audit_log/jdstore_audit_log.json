@@ -1,51 +1,58 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-02-07 11:25:10.734687",
+ "creation": "2026-02-09 08:54:10.413275",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_okac"
+  "section_break_xewe"
  ],
  "fields": [
       {
-        "fieldname": "governance_case_id",
-        "label": "Governance Case",
-        "fieldtype": "Link",
-        "options": "JDStore Governance Case",
-        "reqd": 1
-      },
-      {
-        "fieldname": "agent_name",
-        "label": "Agent Name",
+        "fieldname": "entity_type",
+        "label": "Entity Type",
         "fieldtype": "Data",
         "reqd": 1
       },
       {
-        "fieldname": "result_summary",
-        "label": "Result Summary",
+        "fieldname": "entity_id",
+        "label": "Entity ID",
+        "fieldtype": "Data",
+        "reqd": 1
+      },
+      {
+        "fieldname": "action",
+        "label": "Action",
+        "fieldtype": "Data",
+        "reqd": 1
+      },
+      {
+        "fieldname": "actor_id",
+        "label": "Actor ID",
+        "fieldtype": "Data",
+        "reqd": 1
+      },
+      {
+        "fieldname": "changes",
+        "label": "Changes",
         "fieldtype": "Code",
         "options": "JSON"
       },
       {
-        "fieldname": "duration_ms",
-        "label": "Duration (ms)",
-        "fieldtype": "Int"
-      },
-      {
-        "fieldname": "executed_at",
-        "label": "Executed At",
+        "fieldname": "created_at",
+        "label": "Created At",
         "fieldtype": "Datetime",
-        "reqd": 1
+        "reqd": 1,
+        "default": "Now"
       }
     ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-07 11:25:10.734687",
+ "modified": "2026-02-09 08:54:10.413275",
  "modified_by": "Administrator",
  "module": "JDStore",
- "name": "JDStore Analysis Run",
+ "name": "JDStore Audit Log",
  "owner": "Administrator",
  "permissions": [
   {

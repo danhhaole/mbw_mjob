@@ -12,47 +12,71 @@
   "published_at",
   "expired_at"
  ],
- "fields": [
-  {
-   "fieldname": "status",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Status",
-   "reqd": 1
-  },
-  {
-   "fieldname": "canonical_version",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Canonical Version",
-   "reqd": 1
-  },
-  {
-   "fieldname": "job_content",
-   "fieldtype": "JSON",
-   "in_list_view": 1,
-   "label": "Job Content",
-   "reqd": 1
-  },
-  {
-   "fieldname": "published_at",
-   "fieldtype": "Datetime",
-   "label": "Published At"
-  },
-  {
-   "fieldname": "expired_at",
-   "fieldtype": "Datetime",
-   "label": "Expired At"
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Company",
-   "options": "JDStore Company",
-   "reqd": 1
-  }
- ],
+"fields": [
+      {
+        "fieldname": "company_id",
+        "label": "Company",
+        "fieldtype": "Link",
+        "options": "JDStore Company",
+        "reqd": 1
+      },
+      {
+        "fieldname": "raw_record_id",
+        "label": "Raw Record",
+        "fieldtype": "Link",
+        "options": "JDStore Raw Job Record"
+      },
+      {
+        "fieldname": "title",
+        "label": "Title",
+        "fieldtype": "Data",
+        "reqd": 1,
+        "in_list_view": 1
+      },
+      {
+        "fieldname": "status",
+        "label": "Status",
+        "fieldtype": "Select",
+        "options": "DRAFT\nPUBLISHED\nHIDDEN\nEXPIRED",
+        "reqd": 1
+      },
+      {
+        "fieldname": "governance_status",
+        "label": "Governance Status",
+        "fieldtype": "Select",
+        "options": "PENDING\nAPPROVED\nREJECTED\nCHANGES_REQUESTED",
+        "reqd": 1
+      },
+      {
+        "fieldname": "job_content",
+        "label": "Job Content",
+        "fieldtype": "Code",
+        "options": "JSON",
+        "reqd": 1
+      },
+      {
+        "fieldname": "salary_config",
+        "label": "Salary Config",
+        "fieldtype": "Code",
+        "options": "JSON"
+      },
+      {
+        "fieldname": "location_config",
+        "label": "Location Config",
+        "fieldtype": "Code",
+        "options": "JSON"
+      },
+      {
+        "fieldname": "published_at",
+        "label": "Published At",
+        "fieldtype": "Datetime"
+      },
+      {
+        "fieldname": "expired_at",
+        "label": "Expired At",
+        "fieldtype": "Datetime"
+      }
+    ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],

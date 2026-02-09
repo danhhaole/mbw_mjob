@@ -18,9 +18,16 @@
    "reqd": 1
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Data",
-   "label": "Status"
+    "fieldname": "tax_code",
+    "label": "Tax Code",
+    "fieldtype": "Data"
+  },
+  {
+    "fieldname": "status",
+    "label": "Status",
+    "fieldtype": "Select",
+    "options": "VERIFIED\nPENDING\nBLACKLISTED",
+    "reqd": 1
   },
   {
    "default": "{}",

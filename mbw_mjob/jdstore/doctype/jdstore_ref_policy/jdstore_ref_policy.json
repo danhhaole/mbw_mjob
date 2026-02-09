@@ -1,32 +1,31 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-02-09 09:01:35.109259",
+ "creation": "2026-02-09 08:49:41.771191",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_1xyi"
+  "section_break_pzpv"
  ],
- "description": "Chính sách giám sát định kỳ (quét lại các tin đang chạy).",
-    "fields": [
+ "fields": [
       {
-        "fieldname": "policy_name",
-        "label": "Policy Name",
+        "fieldname": "policy_code",
+        "label": "Policy Code",
         "fieldtype": "Data",
         "reqd": 1
       },
       {
-        "fieldname": "target_criteria",
-        "label": "Target Criteria",
-        "fieldtype": "Code",
-        "options": "JSON",
-        "description": "Điều kiện lọc tin để quét (VD: Tin > 30 ngày)"
+        "fieldname": "version",
+        "label": "Version",
+        "fieldtype": "Int",
+        "reqd": 1
       },
       {
-        "fieldname": "schedule_cron",
-        "label": "Schedule (Cron)",
-        "fieldtype": "Data",
-        "description": "Tần suất chạy (VD: 0 0 * * *)"
+        "fieldname": "rules_config",
+        "label": "Rules Config",
+        "fieldtype": "Code",
+        "options": "JSON",
+        "reqd": 1
       },
       {
         "fieldname": "is_active",
@@ -38,10 +37,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-09 09:01:35.109259",
+ "modified": "2026-02-09 08:49:41.771191",
  "modified_by": "Administrator",
  "module": "JDStore",
- "name": "JDStore Monitoring Policy",
+ "name": "JDStore Ref Policy",
  "owner": "Administrator",
  "permissions": [
   {

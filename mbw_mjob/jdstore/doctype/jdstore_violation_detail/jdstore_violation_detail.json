@@ -1,51 +1,45 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-02-07 11:25:10.734687",
+ "creation": "2026-02-09 08:51:51.821486",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_okac"
+  "section_break_kuux"
  ],
  "fields": [
       {
-        "fieldname": "governance_case_id",
-        "label": "Governance Case",
+        "fieldname": "analysis_run_id",
+        "label": "Analysis Run",
         "fieldtype": "Link",
-        "options": "JDStore Governance Case",
+        "options": "JDStore Analysis Run",
         "reqd": 1
       },
       {
-        "fieldname": "agent_name",
-        "label": "Agent Name",
-        "fieldtype": "Data",
+        "fieldname": "policy_id",
+        "label": "Policy",
+        "fieldtype": "Link",
+        "options": "JDStore Ref Policy",
         "reqd": 1
       },
       {
-        "fieldname": "result_summary",
-        "label": "Result Summary",
-        "fieldtype": "Code",
-        "options": "JSON"
+        "fieldname": "field_name",
+        "label": "Field Name",
+        "fieldtype": "Data"
       },
       {
-        "fieldname": "duration_ms",
-        "label": "Duration (ms)",
-        "fieldtype": "Int"
-      },
-      {
-        "fieldname": "executed_at",
-        "label": "Executed At",
-        "fieldtype": "Datetime",
-        "reqd": 1
+        "fieldname": "detected_value",
+        "label": "Detected Value",
+        "fieldtype": "Text"
       }
     ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-07 11:25:10.734687",
+ "modified": "2026-02-09 08:51:51.821486",
  "modified_by": "Administrator",
  "module": "JDStore",
- "name": "JDStore Analysis Run",
+ "name": "JDStore Violation Detail",
  "owner": "Administrator",
  "permissions": [
   {
